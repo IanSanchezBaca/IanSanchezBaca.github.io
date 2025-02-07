@@ -1,1 +1,1 @@
-This should relocate to a different page
+This should be the main page now.
