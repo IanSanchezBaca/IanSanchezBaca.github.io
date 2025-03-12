@@ -1,40 +1,7 @@
 body, html { 
     /* This should modify all of the <body> and <html> */
     height: 100%;
-    margin: 0;
+    margin: 50;
     font-family: Arial, sans-serif;
 }
 
-#resume-container {
-    /* custom container class */
-    position: absolute;
-    width: 50%; /* 4/16 from left & right */
-    height: 50%; /* 4/16 from top & bottom */
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Default Desktop Layout */
-@media (min-width: 768px) {
-    #resume-container {
-        width: 50%; /* 50% of screen width on large screens */
-        height: 50%; /* 50% of screen height */
-    }
-}
-/* Desktop Layout (above 768px width): The resume container takes up 50% of the screen width and height. */
-
-/* Mobile Layout */
-@media (max-width: 767px) {
-/* @media (max-width: 412px) { */
-    #resume-container {
-        width: 90%; /* 90% of screen width on mobile */
-        height: auto; /* Adjust height as necessary */
-        top: 10%; /* Adjust the vertical position */
-        left: 5%; /* Adjust the horizontal position */
-        padding: 15px;
-    }
-}
-/* Mobile Layout (below 768px width): The resume container takes up 90% of the screen width and adjusts the top and left margins for proper centering. */
