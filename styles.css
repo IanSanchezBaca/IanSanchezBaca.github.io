@@ -28,6 +28,7 @@ body, html {
 
 /* Mobile Layout */
 @media (max-width: 767px) {
+/* @media (max-width: 412px) { */
     #resume-container {
         width: 90%; /* 90% of screen width on mobile */
         height: auto; /* Adjust height as necessary */
