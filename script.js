@@ -2,24 +2,23 @@ document.addEventListener("DOMContentLoaded", function() {
     const resume = document.getElementById("resume-container");
 
     function getDPI() {
-        return window.devicePixelRatio * 96; // Most screens assume 96 DPI
+        return window.devicePixelRatio * 96; // Standard assumption: 96 DPI
     }
 
     function inchesToPixels(inches) {
         return inches * getDPI();
     }
 
-    function applyMargins() {
-        let margin = inchesToPixels(0.5); // 0.5-inch margin
+    function applyDynamicMargins() {
+        let margin = inchesToPixels(0.5); // Convert 0.5 inches to pixels
+
         resume.style.position = "absolute";
-        resume.style.top = margin + "px";
-        resume.style.left = margin + "px";
-        resume.style.right = margin + "px";
-        resume.style.bottom = margin + "px";
-        resume.style.width = `calc(100% - ${2 * margin}px)`;
-        resume.style.height = `calc(100% - ${2 * margin}px)`;
+        resume.style.width = `${window.innerWidth - 2 * margin}px`;
+        resume.style.height = `${window.innerHeight - 2 * margin}px`;
+        resume.style.left = `${margin}px`;
+        resume.style.top = `${margin}px`;
     }
 
-    applyMargins();
-    window.addEventListener("resize", applyMargins);
+    applyDynamicMargins(); // Apply margins on page load
+    window.addEventListener("resize", applyDynamicMargins); // Update on resize
 });
