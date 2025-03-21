@@ -38,9 +38,9 @@ function doMath(expression){
     
     /* Evaluate the expression from left to right */
     while(opStack.length){ // keep going until opStack is empty
-        let num1 = numStack.pop();
-        let num2 = numStack.pop();
-        let op = opStack.pop();
+        let num1 = numStack.shift();
+        let num2 = numStack.shift();
+        let op = opStack.shift();
         
 
         switch (op){
@@ -64,7 +64,7 @@ function doMath(expression){
                 break;
         }
 
-        numStack.push(result);
+        numStack.unshift(result);
     }
     
     // console.log(result);
