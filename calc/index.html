@@ -1,0 +1,49 @@
+<!-- Ian Sanchez Baca 
+     Calculator app 
+     index.html
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
+
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+
+    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'" />
+
+    <title>calculator, LOL!</title>
+
+    <link rel="stylesheet" href="styles.css"> <!-- loading the css -->
+</head>
+
+<body
+    style="display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; text-align: center;">
+
+    <div class="center-container">
+
+        <div id="input-container">
+            <input type="text" class="myInput" id="calcInput" placeholder="Example: 1+2-3*4/5">
+
+            <button class="myButton" id="calcButton">Enter</button>
+
+            <p id="result"></p> <!-- This should print something? -->
+
+            <script src="script.js"></script> <!-- enter and input code -->
+            <script src="doMath.js"></script> <!-- loads the math code -->
+
+        </div>
+    </div>
+
+    <footer style="background-color: #333; color: white; text-align: center; padding: 10px; width: 100%;">
+        <p>
+            * The math is done from the right to the left.
+        </p>
+    </footer>
+
+</body>
+
+
+
+</html>

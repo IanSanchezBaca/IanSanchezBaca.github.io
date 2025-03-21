@@ -1,0 +1,82 @@
+/* Ensures that the body takes up the full height of the screen */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+}
+  
+
+/* The content area that will grow to take up the available space */
+.content {
+    flex: 1; /* Take up remaining space */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightblue;
+    padding: 20px;
+}
+  
+/* Styling for the footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+  
+.center-container {
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Horizontally center the content */
+    /* align-items: center; Vertically center the content */
+    height: 100vh; /* Make the container fill the entire viewport */
+}
+
+.input-container {
+    display: flex; /* Align the input and button horizontally */
+    align-items: center; /* Vertically center the input and button */
+}
+
+#centered-box { /* centering divs to the center of the screen */
+    width: 300px; /* Set a width */
+    padding: 20px;
+    background-color: lightgray;
+    text-align: center;
+    border-radius: 10px;
+
+    /* Manually Centering */
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.myInput { /* change the input box */
+    width: 300px; /* Set the width of the input box */
+    height: 40px; /* Set the height of the input box */
+    font-size: 20px; /* Set the font size inside the input */
+    padding: 10px; /* Add some padding inside the input box */
+    border: 1px solid #000; /* Add a border to the input box */
+    border-radius: 5px; /* Round the corners of the input box */
+}
+
+.myInput::placeholder { /* change the place holder text */
+    color: #888; /* Change the color of the placeholder text */
+    font-style: italic; /* Change the font style of the placeholder */
+    font-size: 20px;
+}
+
+.myButton {
+    padding: 10px 20px; /* Add padding inside the button */
+    font-size: 20px; /* Set the font size of the button text */
+    background-color: #00f7ff; /* Set the button background color */
+    color: rgb(0, 0, 0); /* Set the text color */
+    border: none; /* Remove the border */
+    border-radius: 5px; /* Round the button corners */
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.myButton:hover {
+    background-color: #a3edff; /* Change background color on hover */
+}
